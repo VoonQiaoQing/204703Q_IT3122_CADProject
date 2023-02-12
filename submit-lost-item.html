@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+
+    <title>Seeker Cove</title>
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="css/magnific-popup.css" rel="stylesheet">
+
+    <link href="css/templatemo-first-portfolio-style.css" rel="stylesheet">
+    <!--
+
+TemplateMo 578 First Portfolio
+
+https://templatemo.com/tm-578-first-portfolio
+
+-->
+</head>
+
+<body>
+
+    <section class="preloader">
+        <div class="spinner">
+            <span class="spinner-rotate"></span>
+        </div>
+    </section>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container" style="background-color: white;">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a href="/index.html" class="navbar-brand mx-auto mx-lg-0" style="color: black">NYP Seeker
+                Cove</a>
+
+            <div class="d-flex align-items-center d-lg-none">
+                <i class="navbar-icon bi-telephone-plus me-3"></i>
+                <a class="custom-btn btn" href="#section_5">
+                    +65 8952 3516
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-lg-5">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html" style="color: #14b789" unactive>Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/lost-items.html" style="color: #14b789">Lost
+                            Treasures</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" style="color: #14b789">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-lg-flex align-items-center d-none ms-auto">
+                    <div id="clock" onload="currentTime()" style="color: #14b789"></div>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <main>
+        <section class="about section-padding" id="section_2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-12 form-inline">
+                        <br> <br>
+                        <div class="about-thumb">
+
+                            <div class="col-lg-12 col-md-12 col-12 ms-auto">
+                                <div style="background-color: lightgray;"
+                                    class="section-title-wrap d-flex justify-content-center align-items-center mb-4">
+                                    <img src="images/green-tick.png" class="about-image img-fluid"
+                                        style="height: 125px; width: 125px;" alt="">
+
+                                    <h2 class="text-white ms-4 mb-0">Submission Done</h2>
+
+                                </div>
+                                <h6 class="mb-4">Thank you for your service. Hopefully the item will be returned to its
+                                    owner. Have a good day!</h6>
+                            </div>
+                            <p class="mb-4"><a class="custom-btn btn custom-link" href="/lost-items.html">Head back to
+                                    Lost Item Page</a></p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-12 col-12">
+                    <div class="copyright-text-wrap">
+                        <p class="mb-0">
+                            <span class="copyright-text">Copyright © 2023 <a href="#">Seeker Cove</a> Company. All
+                                rights reserved.</span>
+                            Design:
+                            <a rel="sponsored" href="https://templatemo.com" target="_blank">TemplateMo</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/click-scroll.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/magnific-popup-options.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+        
+        let date = new Date();
+        let hh = date.getHours();
+        let mm = date.getMinutes();
+        let ss = date.getSeconds();
+        document.getElementById("time").value = hh + ":" + mm;
+        document.getElementById("date").valueAsDate = date;
+
+        function currentTime() {
+            let date = new Date();
+            let hh = date.getHours();
+            let mm = date.getMinutes();
+            let ss = date.getSeconds();
+            let session = "AM";
+
+            if (hh == 0) {
+                hh = 12;
+            }
+            if (hh > 12) {
+                hh = hh - 12;
+                session = "PM";
+            }
+
+            hh = (hh < 10) ? "0" + hh : hh;
+            mm = (mm < 10) ? "0" + mm : mm;
+            ss = (ss < 10) ? "0" + ss : ss;
+
+            let time = hh + ":" + mm + ":" + ss + " " + session;
+
+            document.getElementById("clock").innerText = time;
+            let t = setTimeout(function () { currentTime() }, 1000);
+        }
+        currentTime();
+    </script>
+</body>
+
+</html>

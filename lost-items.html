@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+
+    <title>Seeker Cove</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="css/magnific-popup.css" rel="stylesheet">
+
+    <link href="css/templatemo-first-portfolio-style.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js" defer></script>
+    <script type="text/javascript"
+        src="https://cdn.datatables.net/scroller/2.1.0/js/dataTables.scroller.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css"></script>
+    <script type="text/javascript"
+        src="https://cdn.datatables.net/scroller/2.1.0/css/scroller.dataTables.min.css"></script>
+    <style>
+        label {
+            border-radius: 5px;
+            margin: 15px;
+        }
+
+        label,
+        input {
+            border-radius: 5px;
+        }
+
+        #table_id_paginate a#table_id_previous,
+        #table_id_paginate span a.paginate_button,
+        #table_id_paginate a#table_id_next
+        {
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+
+        #table_id_paginate span a.paginate_button.current
+        {
+            color: #14b789;
+            font-weight: bold;
+        }
+
+        #table_id_length,
+        #table_id_filter,
+        #table_id_paginate,
+        #table_id_info,
+        #createButton {
+            float: right;
+            margin: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="preloader">
+        <div class="spinner">
+            <span class="spinner-rotate"></span>
+        </div>
+    </section>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container" style="background-color: white;">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a href="/index.html" class="navbar-brand mx-auto mx-lg-0" style="color: black">NYP Seeker
+                Cove</a>
+
+            <div class="d-flex align-items-center d-lg-none">
+                <i class="navbar-icon bi-telephone-plus me-3"></i>
+                <a class="custom-btn btn" href="#section_5">
+                    +65 8952 3516
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-lg-5">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html" style="color: #14b789" unactive>Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" style="color: #14b789">Lost
+                            Treasures</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html" style="color: #14b789">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-lg-flex align-items-center d-none ms-auto">
+                    <div id="clock" onload="currentTime()" style="color: #14b789"></div>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <main>
+
+        <section class="featured section-padding" id="section_3">
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-lg-12 col-md-12 col-12 ms-auto">
+                        <div class="section-title-wrap d-flex justify-content-center align-items-center mb-4">
+                            <img src="images/istockphoto-1307215161-170667a.jpg" class="avatar-image img-fluid" alt="">
+                            <h2 class="text-white ms-4 mb-0">Lost Treasures</h2>
+                        </div>
+                    </div>
+                    <p class="mb-4"><a class="custom-btn btn custom-link" href="/create-lost-item.html">Create new
+                            Lost Treasure</a></p>
+                    <div class="clearfix"></div>
+
+                    <div id="category"></div>
+
+                    <table id="table_id" class="display">
+                        <thead style="visibility: hidden;">
+                            <tr>
+                                <th>image</th>
+                                <th>name</th>
+                                <th>contactno</th>
+                                <th>category</th>
+                                <th>date</th>
+                                <th>time</th>
+                                <th>location</th>
+                                <th>description</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-12 col-12">
+                    <div class="copyright-text-wrap">
+                        <p class="mb-0">
+                            <span class="copyright-text">Copyright © 2023 <a href="#">Seeker Cove</a> Company. All
+                                rights reserved.</span>
+                            Design:
+                            <a rel="sponsored" href="https://templatemo.com" target="_blank">TemplateMo</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/click-scroll.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/magnific-popup-options.js"></script>
+    <script src="js/custom.js"></script>
+    <script type="text/javascript">
+
+        let url = "http://localhost:3000/ReceiveData";
+        //let url = window.location.href;
+        fetch(url).then(response => response.json())
+            .then((result) => {
+                console.log('success:', result)
+                //document.getElementById('category').innerHTML = `${result.message[0]['image']}`;
+                $(document).ready(function () {
+                    $('#table_id').DataTable({
+                        "data": result.message,
+                        "columns": [
+                            {
+                                render: function (data, type, row, meta) {
+                                    var html =
+                                        '<div style="width: 1300px; height:"250px" float:right">' +
+                                        '<div class="projects-thumb" style="background-color: white;">' +
+                                        '<div div style="width: 700px; height: 300px; float:left">' +
+                                        '<div style="margin: 10px;">' +
+                                        '<div class="section-title-wrap d-flex justify-content-center align-items-center mb-4">' +
+                                        '<h2 class="text-white" style="font-size:x-large;"> ' + row.itemname + '</h2>' +
+                                        '</div>' +
+                                        '</div>' +
+                                        '<div style="font-size:x-large;" class="projects-title"><b>Contact Details of Finder</b></div>' +
+                                        '<div style="font-size:medium;" class="projects-tag"> Name: ' + row.name + '</div>' +
+                                        '<div style="font-size:medium;" class="projects-tag"> Contact Number: ' + row.contactno + '</div><br>' +
+                                        '<div style="font-size:x-large;" class="projects-title"><b>Details of Lost Item</b></div>' +
+                                        '<div style="font-size:medium;" class="projects-tag"> Found in ' + row.location + '</div>' +
+                                        '<div style="font-size:medium;" class="projects-tag"> Around ' + row.date + ", " + row.time + '</div>' +
+                                        '<div style="font-size:medium;" class="projects-tag"> Description: ' + row.description + '</div>' +
+                                        '</div><div style="width: 500px; height: 400px; float:left">' +
+                                        '<a href=' + '"/upload-images/' + row.image + '"' + 'class="popup-image">' +
+                                        '<img' + ' src="/upload-images/' + row.image + '"' + 'class="projects-image img-fluid" alt=""></img>' +
+                                        '</a><div>' +
+                                        '</div>' +
+                                        '</div>';
+
+                                    return html;
+                                }
+                            },
+                            {
+                                data: "name", visible: false
+                            }
+                        ]
+                    });
+                });
+            })
+            .catch(error => console.log('error:', error));
+
+        function currentTime() {
+            let date = new Date();
+            let hh = date.getHours();
+            let mm = date.getMinutes();
+            let ss = date.getSeconds();
+            let session = "AM";
+
+            if (hh == 0) {
+                hh = 12;
+            }
+            if (hh > 12) {
+                hh = hh - 12;
+                session = "PM";
+            }
+
+            hh = (hh < 10) ? "0" + hh : hh;
+            mm = (mm < 10) ? "0" + mm : mm;
+            ss = (ss < 10) ? "0" + ss : ss;
+
+            let time = hh + ":" + mm + ":" + ss + " " + session;
+
+            document.getElementById("clock").innerText = time;
+            let t = setTimeout(function () { currentTime() }, 1000);
+        }
+        currentTime();
+    </script>
+</body>
+
+</html>

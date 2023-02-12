@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+
+    <title>Seeker Cove</title>
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="css/magnific-popup.css" rel="stylesheet">
+
+    <link href="css/templatemo-first-portfolio-style.css" rel="stylesheet">
+    <!--
+
+TemplateMo 578 First Portfolio
+
+https://templatemo.com/tm-578-first-portfolio
+
+-->
+</head>
+
+<body>
+
+    <section class="preloader">
+        <div class="spinner">
+            <span class="spinner-rotate"></span>
+        </div>
+    </section>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container" style="background-color: white;">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a href="/index.html" class="navbar-brand mx-auto mx-lg-0" style="color: black">NYP Seeker
+                Cove</a>
+
+            <div class="d-flex align-items-center d-lg-none">
+                <i class="navbar-icon bi-telephone-plus me-3"></i>
+                <a class="custom-btn btn" href="#section_5">
+                    +65 8952 3516
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-lg-5">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html" style="color: #14b789" unactive>Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/lost-items.html" style="color: #14b789">Lost
+                            Treasures</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" style="color: #14b789">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-lg-flex align-items-center d-none ms-auto">
+                    <div id="clock" onload="currentTime()" style="color: #14b789"></div>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <main>
+        <section class="contact section-padding" id="section_5">
+            <div class="container">
+                <form action="/uploadLostItem" method="post" class="custom-form contact-form" role="form"
+                    enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-lg-5 col-12 mt-5 mt-lg-0" style="float: left;">
+                            <img id="myImg" src="images/istockphoto-1357365823-612x612.jpg" alt="your image" height=300
+                                width=500><br><br>
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <div class="form-floating">
+                                    <input type="file" name="image" id="image" class="form-control" placeholder=""
+                                        required="">
+
+                                    <label for="floatingInput">Image</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12 mt-5 mt-lg-0" style="float: left;">
+                            <div class="row">
+                                <div>
+                                    <div
+                                        class="section-title-wrap d-flex justify-content-center align-items-center mb-4">
+                                        <h2 class="text-white" style="font-size:xx-large;">Contact Details of Finder
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="form-floating">
+                                        <input type="text" name="name" id="name" class="form-control" placeholder=""
+                                            required="">
+
+                                        <label for="floatingInput">Name</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="form-floating">
+                                        <input type="number" name="contactno" id="contactno" class="form-control"
+                                            placeholder="" required="">
+
+                                        <label for="floatingInput">Contact Number</label>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div
+                                        class="section-title-wrap d-flex justify-content-center align-items-center mb-4">
+                                        <h2 class="text-white" style="font-size:xx-large;">Details about Lost Item
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="form-floating">
+                                        <input type="text" name="itemname" id="itemname" class="form-control"
+                                            placeholder="" required="">
+
+                                        <label for="floatingInput">Item Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="form-floating">
+                                        <input type="text" name="category" id="category" class="form-control"
+                                            placeholder="" required="">
+
+                                        <label for="floatingInput">Category</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="form-floating">
+                                        <input type="date" name="date" id="date" class="form-control" placeholder=""
+                                            required="">
+
+                                        <label for="floatingInput">Date</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="form-floating">
+                                        <input type="time" name="time" id="time" class="form-control" placeholder=""
+                                            required="">
+
+                                        <label for="floatingInput">Time</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" id="location" name="location"
+                                            placeholder=""></textarea>
+
+                                        <label for="floatingTextarea">Location</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" id="description" name="description"
+                                            placeholder=""></textarea>
+
+                                        <label for="floatingTextarea">Detailed Description of the item</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-12 ms-auto">
+                                    <button type="submit" value="Submit" class="form-control"><a
+                                            href="/submit-lost-item.html"></a>Submit</button>
+                                </div>
+
+                            </div>
+                </form>
+            </div>
+
+            </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-12 col-12">
+                    <div class="copyright-text-wrap">
+                        <p class="mb-0">
+                            <span class="copyright-text">Copyright © 2023 <a href="#">Seeker Cove</a> Company. All
+                                rights reserved.</span>
+                            Design:
+                            <a rel="sponsored" href="https://templatemo.com" target="_blank">TemplateMo</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/click-scroll.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/magnific-popup-options.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            document.querySelector('input[type="file"]').addEventListener('change', function () {
+                if (this.files && this.files[0]) {
+                    var img = document.querySelector('img');
+                    img.onload = () => {
+                        URL.revokeObjectURL(img.src);  // no longer needed, free memory
+                    }
+
+                    img.src = URL.createObjectURL(this.files[0]); // set src to blob url
+                }
+                else {
+                    img.src = "images/images/istockphoto-1357365823-612x612.jpg";
+                }
+            });
+        });
+
+        let date = new Date();
+        let hh = date.getHours();
+        let mm = date.getMinutes();
+        let ss = date.getSeconds();
+        document.getElementById("time").value = hh + ":" + mm;
+        document.getElementById("date").valueAsDate = date;
+
+        function currentTime() {
+            let date = new Date();
+            let hh = date.getHours();
+            let mm = date.getMinutes();
+            let ss = date.getSeconds();
+            let session = "AM";
+
+            if (hh == 0) {
+                hh = 12;
+            }
+            if (hh > 12) {
+                hh = hh - 12;
+                session = "PM";
+            }
+
+            hh = (hh < 10) ? "0" + hh : hh;
+            mm = (mm < 10) ? "0" + mm : mm;
+            ss = (ss < 10) ? "0" + ss : ss;
+
+            let time = hh + ":" + mm + ":" + ss + " " + session;
+
+            document.getElementById("clock").innerText = time;
+            let t = setTimeout(function () { currentTime() }, 1000);
+        }
+        currentTime();
+    </script>
+</body>
+
+</html>

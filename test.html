@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+
+    <title>Seeker Cove</title>
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="css/magnific-popup.css" rel="stylesheet">
+
+    <link href="css/templatemo-first-portfolio-style.css" rel="stylesheet">
+
+    <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.8/js/jquery.dataTables.min.js" defer></script> -->
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js" defer></script>
+    <script type="text/javascript"
+        src="https://cdn.datatables.net/scroller/2.1.0/js/dataTables.scroller.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css"></script>
+    <script type="text/javascript"
+        src="https://cdn.datatables.net/scroller/2.1.0/css/scroller.dataTables.min.css"></script>
+
+
+
+
+    <!--
+
+TemplateMo 578 First Portfolio
+
+https://templatemo.com/tm-578-first-portfolio
+
+-->
+</head>
+
+<body>
+
+    <section class="preloader">
+        <div class="spinner">
+            <span class="spinner-rotate"></span>
+        </div>
+    </section>
+
+
+    <main>
+        <table id="table_id" class="display">
+            <thead>
+                <tr>
+                    <th>image</th>
+                    <th>name</th>
+                    <th>contactno</th>
+                    <th>category</th>
+                    <th>date</th>
+                    <th>time</th>
+                    <th>location</th>
+                    <th>description</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        </div>
+        </div>
+        </section>
+    </main>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/click-scroll.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/magnific-popup-options.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        // import { mysql } from 'mysql.js';
+        // console.log('hi');
+        const con = mysql.createConnection({
+            host: "my-node-database.cluster-cayiqizxzfad.us-east-1.rds.amazonaws.com",
+            user: "admin",
+            password: "scaaapEpupa"
+        });
+        // con.connect(function (err) {
+        //     con.query(`SELECT * FROM main.foundItem`, function (err, result, fields) {
+        //         if (err) res.send(err);
+        //         if (result) //res.send(result);
+        //         console.log(result);
+
+        // var data = [
+        //     {
+        //         id: 1,
+        //         image: '86239487_p0_master1200.jpg',
+        //         name: 'qwer',
+        //         contactno: 12341234,
+        //         category: 'qwer',
+        //         date: '2023-02-10',
+        //         time: '04:52',
+        //         location: 'qwer',
+        //         description: 'qwer'
+        //     },
+        //     {
+        //         id: 2,
+        //         image: 'istockphoto-1307215161-170667a.jpg',
+        //         name: 'Nikki Wolf',
+        //         contactno: 12331234,
+        //         category: 'Private Belonging',
+        //         date: '2023-02-11',
+        //         time: '15:20',
+        //         location: 'Location',
+        //         description: 'Description'
+        //     },
+        //     {
+        //         id: 3,
+        //         image: 'istockphoto-1307215161-170667a.jpg',
+        //         name: 'Nikki Wolf',
+        //         contactno: 12331234,
+        //         category: 'Private Belonging',
+        //         date: '2023-02-11',
+        //         time: '15:20',
+        //         location: 'Location',
+        //         description: 'Description'
+        //     },
+        //     {
+        //         id: 4,
+        //         image: 'istockphoto-1307215161-170667a.jpg',
+        //         name: 'Nikki Wolf',
+        //         contactno: 12331234,
+        //         category: 'Private Belonging',
+        //         date: '2023-02-11',
+        //         time: '15:20',
+        //         location: 'Location',
+        //         description: 'Description'
+        //     },
+        //     {
+        //         id: 5,
+        //         image: 'istockphoto-1307215161-170667a.jpg',
+        //         name: 'Nikki Wolf',
+        //         contactno: 12331234,
+        //         category: 'Private Belonging',
+        //         date: '2023-02-11',
+        //         time: '15:20',
+        //         location: 'Location',
+        //         description: 'Description'
+        //     },
+        //     {
+        //         id: 6,
+        //         image: 'istockphoto-1307215161-170667a.jpg',
+        //         name: 'Nikki Wolf',
+        //         contactno: 12331234,
+        //         category: 'Private Belonging',
+        //         date: '2023-02-11',
+        //         time: '15:20',
+        //         location: 'Location',
+        //         description: 'Description'
+        //     },
+        //     {
+        //         id: 7,
+        //         image: 'istockphoto-1307215161-170667a.jpg',
+        //         name: 'Nikki Wolf',
+        //         contactno: 12331234,
+        //         category: 'Private Belonging',
+        //         date: '2023-02-11',
+        //         time: '15:20',
+        //         location: 'Location',
+        //         description: 'Description'
+        //     },
+        //     {
+        //         id: 8,
+        //         image: 'istockphoto-1307215161-170667a.jpg',
+        //         name: 'Nikki Wolf',
+        //         contactno: 12331234,
+        //         category: 'Private Belonging',
+        //         date: '2023-02-11',
+        //         time: '15:20',
+        //         location: 'Location',
+        //         description: 'Description'
+        //     },
+        //     {
+        //         id: 9,
+        //         image: 'istockphoto-1307215161-170667a.jpg',
+        //         name: 'Nikki Wolf',
+        //         contactno: 12331234,
+        //         category: 'Private Belonging',
+        //         date: '2023-02-11',
+        //         time: '15:20',
+        //         location: 'Location',
+        //         description: 'Description'
+        //     },
+        //     {
+        //         id: 10,
+        //         image: 'istockphoto-1307215161-170667a.jpg',
+        //         name: 'Nikki Wolf',
+        //         contactno: 12331234,
+        //         category: 'Private Belonging',
+        //         date: '2023-02-11',
+        //         time: '15:20',
+        //         location: 'Location',
+        //         description: 'Description'
+        //     },
+        //     {
+        //         id: 11,
+        //         image: 'istockphoto-1307215161-170667a.jpg',
+        //         name: 'Nikki Wolf',
+        //         contactno: 12331234,
+        //         category: 'Private Belonging',
+        //         date: '2023-02-11',
+        //         time: '15:20',
+        //         location: 'Location',
+        //         description: 'Description'
+        //     },
+        //     {
+        //         id: 12,
+        //         image: 'istockphoto-1307215161-170667a.jpg',
+        //         name: 'Nikki Wolf',
+        //         contactno: 12331234,
+        //         category: 'Private Belonging',
+        //         date: '2023-02-11',
+        //         time: '15:20',
+        //         location: 'Location',
+        //         description: 'Description'
+        //     },
+        //     {
+        //         id: 13,
+        //         image: 'istockphoto-1307215161-170667a.jpg',
+        //         name: 'Nikki Wolf',
+        //         contactno: 12331234,
+        //         category: 'Private Belonging',
+        //         date: '2023-02-11',
+        //         time: '15:20',
+        //         location: 'Location',
+        //         description: 'Description'
+        //     },
+        //     {
+        //         id: 14,
+        //         image: 'istockphoto-1307215161-170667a.jpg',
+        //         name: 'Nikki Wolf',
+        //         contactno: 12331234,
+        //         category: 'Private Belonging',
+        //         date: '2023-02-11',
+        //         time: '15:20',
+        //         location: 'Location',
+        //         description: 'Description'
+        //     },
+        //     {
+        //         id: 15,
+        //         image: 'istockphoto-1307215161-170667a.jpg',
+        //         name: 'Nikki Wolf',
+        //         contactno: 12331234,
+        //         category: 'Private Belonging',
+        //         date: '2023-02-11',
+        //         time: '15:20',
+        //         location: 'Location',
+        //         description: 'Description'
+        //     },
+        //     {
+        //         id: 16,
+        //         image: 'istockphoto-1307215161-170667a.jpg',
+        //         name: 'Nikki Wolf',
+        //         contactno: 12331234,
+        //         category: 'Private Belonging',
+        //         date: '2023-02-11',
+        //         time: '15:20',
+        //         location: 'Location',
+        //         description: 'Description'
+        //     },
+        //     {
+        //         id: 17,
+        //         image: 'istockphoto-1307215161-170667a.jpg',
+        //         name: 'Nikki Wolf',
+        //         contactno: 12331234,
+        //         category: 'Private Belonging',
+        //         date: '2023-02-11',
+        //         time: '15:20',
+        //         location: 'Location',
+        //         description: 'Description'
+        //     },
+        //     {
+        //         id: 18,
+        //         image: 'istockphoto-1307215161-170667a.jpg',
+        //         name: 'Nikki Wolf',
+        //         contactno: 12331234,
+        //         category: 'Private Belonging',
+        //         date: '2023-02-11',
+        //         time: '15:20',
+        //         location: 'Location',
+        //         description: 'Description'
+        //     },
+        //     {
+        //         id: 19,
+        //         image: 'istockphoto-1307215161-170667a.jpg',
+        //         name: 'Nikki Wolf',
+        //         contactno: 12331234,
+        //         category: 'Private Belonging',
+        //         date: '2023-02-11',
+        //         time: '15:20',
+        //         location: 'Location',
+        //         description: 'Description'
+        //     },
+        //     {
+        //         id: 20,
+        //         image: 'istockphoto-1307215161-170667a.jpg',
+        //         name: 'Nikki Wolf',
+        //         contactno: 12331234,
+        //         category: 'Private Belonging',
+        //         date: '2023-02-11',
+        //         time: '15:20',
+        //         location: 'Location',
+        //         description: 'Description'
+        //     },
+        //     {
+        //         id: 21,
+        //         image: 'istockphoto-1307215161-170667a.jpg',
+        //         name: 'Nikki Wolf',
+        //         contactno: 12331234,
+        //         category: 'Private Belonging',
+        //         date: '2023-02-11',
+        //         time: '15:20',
+        //         location: 'Location',
+        //         description: 'Description'
+        //     },
+        //     {
+        //         id: 22,
+        //         image: 'istockphoto-1307215161-170667a.jpg',
+        //         name: 'Nikki Wolf',
+        //         contactno: 12341234,
+        //         category: 'Private Belonging',
+        //         date: '2023-02-11',
+        //         time: '17:29',
+        //         location: 'qwerqt',
+        //         description: 'qwetqteq'
+        //     },
+        //     {
+        //         id: 23,
+        //         image: 'istockphoto-1307215161-170667a.jpg',
+        //         name: 'Nikki Wolf',
+        //         contactno: 12341234,
+        //         category: 'Private Belonging',
+        //         date: '2023-02-11',
+        //         time: '17:29',
+        //         location: 'qwerqt',
+        //         description: 'qwetqteq'
+        //     },
+        //     {
+        //         id: 24,
+        //         image: 'istockphoto-1307215161-170667a.jpg',
+        //         name: 'Nikki Wolf',
+        //         contactno: 12341234,
+        //         category: 'Private Belonging',
+        //         date: '2023-02-11',
+        //         time: '17:29',
+        //         location: 'qwerqt',
+        //         description: 'qwetqteq'
+        //     },
+        //     {
+        //         id: 25,
+        //         image: 'istockphoto-1307215161-170667a.jpg',
+        //         name: 'Nikki Wolf',
+        //         contactno: 12341234,
+        //         category: 'Private Belonging',
+        //         date: '2023-02-11',
+        //         time: '17:29',
+        //         location: 'qwerqt',
+        //         description: 'qwetqteq'
+        //     },
+        //     {
+        //         id: 26,
+        //         image: 'istockphoto-1307215161-170667a.jpg',
+        //         name: 'Nikki Wolf',
+        //         contactno: 12341234,
+        //         category: 'Private Belonging',
+        //         date: '2023-02-11',
+        //         time: '17:29',
+        //         location: 'qwerqt',
+        //         description: 'qwetqteq'
+        //     },
+        //     {
+        //         id: 27,
+        //         image: 'istockphoto-1307215161-170667a.jpg',
+        //         name: 'Nikki Wolf',
+        //         contactno: 12341234,
+        //         category: 'Private Belonging',
+        //         date: '2023-02-11',
+        //         time: '17:29',
+        //         location: 'qwerqt',
+        //         description: 'qwetqteq'
+        //     }
+        // ]
+        //for (item in result) {
+        //console.log(result[item].name);
+
+        // document.getElementById("category").innerText = item.category;
+        // document.getElementById("itemname").innerText = item.name;
+        // document.getElementById("location").innerText = item.location;
+        // document.getElementById("dataAndTime").innerText = item.date;
+        // var $ = require('jquery');
+        // var DataTable = require('datatables.net')();
+
+        con.connect(function (err) {
+            con.query(`SELECT * FROM main.foundItem`, function (err, result, fields) {
+                if (err) res.send(err);
+                if (result) //res.send(result);
+                    console.log(result);
+                    var data = result;
+
+                $(document).ready(function () {
+
+                    $('#table_id').DataTable({
+                        "data": data,
+                        "columns": [{
+                            "data": "image",
+                        }, {
+                            "data": "name"
+                        }, {
+                            "data": "contactno"
+                        }, {
+                            "data": "category"
+                        }, {
+                            "data": "date"
+                        }, {
+                            "data": "time"
+                        }, {
+                            "data": "location"
+                        }, {
+                            "data": "description"
+                        }]
+                    });
+                });
+            })
+        });
+        //}
+        //     });
+        // });
+    </script>
+</body>
+
+</html>
