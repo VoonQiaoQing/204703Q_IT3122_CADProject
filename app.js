@@ -130,9 +130,9 @@ app.post('/uploadLostItem', upload.single("image"), (req, res) => {
   res.sendFile(__dirname + "/submit-lost-item.html");
 })
 
-app.listen(port, () => {
-  //console.log(`Example app listening on port ${port}`)
-  console.log(`Server running at http://localhost:${port}/lost-items.html`);
-})
+// app.listen(port, () => {
+//   //console.log(`Example app listening on port ${port}`)
+//   console.log(`Server running at http://localhost:${port}/lost-items.html`);
+// })
 
 module.exports = { mysql }
